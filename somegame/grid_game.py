@@ -62,13 +62,6 @@ for col in range(height):
 random_x = None
 random_y = None
 random_tile = False
-
-
-#def randomTile():
-#   random_x = random.randint(1,width)
-#    random_y = random.randint(1,height)
-#    board[random_y-1][random_x-1][2]= True
-#    board[random_y-1][random_x-1][3]= difficulty*FPS
     
     
 again = False # determines whether the game has been restarted
