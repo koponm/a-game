@@ -2,6 +2,7 @@ import pygame
 import sys
 import time
 import random
+import os
 
 pygame.init()
 
@@ -33,11 +34,12 @@ pygame.display.set_caption('Simple grid game')
 clock = pygame.time.Clock()
 
 time=startTime
-
+highscore =0
 #checking the previous highscore
-f= open("highscore.txt","r") # finding out the previous highscore
+f= open("highscore.txt","w+") # finding out the previous highscore
 contents= f.read()
-highscore=int(contents)
+if os.stat("highscore.txt").st_size != 0:
+	highscore=int(contents)
 f.close()
 
 #Creating the gameboard wich is tile_size*tile_size pixels
@@ -62,6 +64,7 @@ for col in range(height):
 random_x = None
 random_y = None
 random_tile = False
+
     
     
 again = False # determines whether the game has been restarted
